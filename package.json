@@ -1,6 +1,6 @@
 {
-  "name": "$NAME",
-  "description": "$DESCRIPTION",
+  "name": "adal-node-null-cache",
+  "description": "Windows Azure Active Directory Authentication with a Null Cache",
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
@@ -22,9 +22,12 @@
     "nyc": "^6.4.4",
     "xo": "^0.15.1"
   },
+  "optionalPeerDependencies": {
+    "adal-node": "^0.1.19"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:forivall/$NAME.git"
+    "url": "git@github.com:forivall/adal-node-null-cache.git"
   },
   "xo": {
     "space": 2,
