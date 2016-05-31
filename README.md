@@ -13,7 +13,7 @@ npm install --save adal-node adal-node-null-cache
 
 ## Usage
 
-```
+```js
 var NullCache = require('adal-node-null-cache').NullCache;
 var adal = require('adal-node');
 var context = new adal.AuthenticationContext(authority, validateAuthority, new NullCache());
@@ -24,7 +24,7 @@ installed and accessible, `adal-node-null-cache` will expose all of the methods
 of `adal-node`, and a `createAuthenticationContext` method that uses a
 `NullCache` instead of a global `MemoryCache`.
 
-```
+```js
 var adal = require('adal-node-null-cache');
 var context = adal.createAuthenticationContext(authority, validateAuthority);
 ```
