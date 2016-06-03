@@ -1,7 +1,7 @@
 {
   "name": "adal-node-null-cache",
   "description": "Windows Azure Active Directory Authentication with a Null Cache",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {},
   "scripts": {
     "lint": "xo './!(node_modules|test)/**' *",
