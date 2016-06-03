@@ -2,3 +2,5 @@
 /coverage
 *.log
 *.cache
+/test/peer/node_modules
+.nyc_output

@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "xo './!(node_modules|test)/**' *",
     "inspect": "jsinspect",
-    "pretest": "npm run lint && npm run inspect",
+    "pretest": "npm run lint && npm run inspect && npm run pretest-peer-install",
+    "pretest-peer-install": "node -e \"require('child_process').spawn('npm', ['i'], {cwd: 'test/peer', stdio: 'inherit'})\"",
     "test": "ava",
     "test-cov": "nyc ava",
     "posttest-cov": ""
@@ -19,6 +20,7 @@
   "devDependencies": {
     "ava": "^0.15.1",
     "jsinspect": "^0.8.0",
+    "mockery": "^1.7.0",
     "nyc": "^6.4.4",
     "xo": "^0.15.1"
   },

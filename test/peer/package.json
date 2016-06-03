@@ -1,0 +1,8 @@
+{
+  "name": "test-peer",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "adal-node": "^0.1.19"
+  }
+}
