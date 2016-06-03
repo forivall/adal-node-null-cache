@@ -7,10 +7,12 @@
     "lint": "xo './!(node_modules|test)/**' *",
     "inspect": "jsinspect",
     "pretest": "npm run lint && npm run inspect && npm run pretest-peer-install",
+    "pretest-cov": "npm run pretest",
     "pretest-peer-install": "node -e \"require('child_process').spawn('npm', ['i'], {cwd: 'test/peer', stdio: 'inherit'})\"",
     "test": "ava",
     "test-cov": "nyc ava",
-    "posttest-cov": ""
+    "test-ci": "npm run test-cov",
+    "posttest-ci": "nyc report --reporter=text-lcov | coveralls"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
@@ -19,6 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.15.1",
+    "coveralls": "^2.11.9",
     "jsinspect": "^0.8.0",
     "mockery": "^1.7.0",
     "nyc": "^6.4.4",
