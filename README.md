@@ -4,6 +4,7 @@ Windows Azure Active Directory Authentication with a Null Cache
 
 [![build status](https://secure.travis-ci.org/forivall/adal-node-null-cache.svg)](http://travis-ci.org/forivall/adal-node-null-cache)
 [![dependency status](https://david-dm.org/forivall/adal-node-null-cache.svg)](https://david-dm.org/forivall/adal-node-null-cache)
+[![coverage status](https://coveralls.io/repos/github/forivall/adal-node-null-cache/badge.svg?branch=master)](https://coveralls.io/github/forivall/adal-node-null-cache?branch=master)
 
 ## Installation
 
