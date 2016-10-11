@@ -25,7 +25,7 @@
     "jsinspect": "^0.8.0",
     "mockery": "^1.7.0",
     "nyc": "^8.3.0",
-    "xo": "^0.15.1"
+    "xo": "^0.16.0"
   },
   "optionalPeerDependencies": {
     "adal-node": "^0.1.19"
