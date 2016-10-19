@@ -2,16 +2,23 @@
 
 exports.NullCache = NullCache;
 function NullCache() {}
-NullCache.prototype.remove = function (entries, callback) { callback(); };
-NullCache.prototype.add = function (entries, callback) { callback(); };
-NullCache.prototype.find = function (query, callback) { callback(null, []); };
+NullCache.prototype.remove = function (entries, callback) {
+  callback();
+};
+NullCache.prototype.add = function (entries, callback) {
+  callback();
+};
+NullCache.prototype.find = function (query, callback) {
+  callback(null, []);
+};
 
 var adal;
 try {
+  // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
   adal = require('adal-node');
-} catch (e) {
-  if (e.code !== 'MODULE_NOT_FOUND') {
-    throw e;
+} catch (err) {
+  if (err.code !== 'MODULE_NOT_FOUND') {
+    throw err;
   }
 }
 
@@ -19,7 +26,7 @@ if (adal) {
   var globalCache = new NullCache();
 
   for (var x in adal) {
-    if (adal.hasOwnProperty(x)) {
+    if (Object.prototype.hasOwnProperty.call(adal, x)) {
       exports[x] = adal[x];
     }
   }

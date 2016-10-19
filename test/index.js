@@ -20,7 +20,6 @@ test.cb('it caches nothing', (t) => {
   t.pass()
 })
 
-
 test.cb('remove does nothing', (t) => {
   const cache = new NullCache()
   cache.remove({foo: 'bar'}, (err) => {
