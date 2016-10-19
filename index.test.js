@@ -6,7 +6,7 @@ import index from '..'
 
 const {NullCache} = index
 
-test.cb('it caches nothing', t => {
+test.cb('it caches nothing', (t) => {
   const cache = new NullCache()
   cache.add({foo: 'bar'}, (err, ok) => {
     t.ifError(err)
@@ -21,7 +21,7 @@ test.cb('it caches nothing', t => {
 })
 
 
-test.cb('remove does nothing', t => {
+test.cb('remove does nothing', (t) => {
   const cache = new NullCache()
   cache.remove({foo: 'bar'}, (err) => {
     t.ifError(err)
