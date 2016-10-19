@@ -19,6 +19,7 @@
     "pretest": "node -e \"require('child_process').spawn('npm', ['i'], {cwd: 'test/peer', stdio: 'inherit'})\"",
     "test": "ava",
     "posttest": "npm run lint && npm run inspect",
+    "pretest-cov": "npm run pretest",
     "test-cov": "nyc ava",
     "posttest-cov": "npm run posttest",
     "test-ci": "npm run test-cov",
