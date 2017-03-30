@@ -34,7 +34,7 @@
   "peerDependencies": {},
   "devDependencies": {
     "ava": "^0.16.0",
-    "coveralls": "^2.11.14",
+    "coveralls": "^2.13.0",
     "eslint-config-mxo": "^0.4.0",
     "jsinspect": "^0.8.0",
     "mockery": "^1.7.0",
